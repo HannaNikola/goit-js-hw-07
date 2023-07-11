@@ -18,10 +18,10 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-console.log(galleryItems);
+// console.log(galleryItems);
 
 const imgEl = document.querySelector('.gallery');
-console.log(imgEl);
+// console.log(imgEl);
 
 
 const imagesList = galleryItems.map((item) => {
@@ -38,9 +38,18 @@ const imagesList = galleryItems.map((item) => {
 }).join('');
 
 imgEl.insertAdjacentHTML('beforeend', imagesList);
-console.log(imagesList);
-
-
-
-// document.body.insertAdjacentHTML('beforeend', imagesList);
 // console.log(imagesList);
+
+
+imgEl.addEventListener('click', showPhoto);
+
+function showPhoto(event) {
+    console.log(event.target.tagName);
+    if (event.target.tagName === 'IMG') {
+        return  ;
+    }
+}
+
+const modal = basicLightbox.create(`
+   <img src="${link}" width="800" height="600">
+`)
