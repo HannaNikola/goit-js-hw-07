@@ -44,6 +44,7 @@ imgEl.insertAdjacentHTML('beforeend', imagesList);
 imgEl.addEventListener('click', showPhoto);
 
 function showPhoto(event) {
+    event.preventDefault();
     console.log(event.target.tagName);
     if (event.target.tagName === 'IMG') {
         return  ;
@@ -51,7 +52,7 @@ function showPhoto(event) {
 }
 
 const modal = basicLightbox.create(`
-   <img src="${item.original}" width="800" height="600">
+   <img src="${event.target.dataset}" width="800" height="600">
 `)
 instance.show()
 
