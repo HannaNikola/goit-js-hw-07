@@ -37,7 +37,7 @@ const imagesList = galleryItems.map((item) => {
         `
 }).join('');
 
-document.body.insertAdjacentHTML('beforeend', imagesList);
+imgEl.insertAdjacentHTML('beforeend', imagesList);
 console.log(imagesList);
 
 
