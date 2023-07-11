@@ -2,14 +2,9 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 console.log(galleryItems);
 
-// const lightbox = new SimpleLightbox('.gallery a ', {
-//     captionsData: 'alt',
-//     captionDelay: 250 ,
-// });
-
 
 const imgEl = document.querySelector('.gallery');
-// console.log(imgEl);
+console.log(imgEl);
 
 
 const imagesList = galleryItems.map((item) => {
@@ -35,5 +30,6 @@ function showPhoto(event) {
 
 const lightbox = new SimpleLightbox('.gallery a ', {
     captionsData: 'alt',
-    captionDelay: 250 ,
+    captionDelay: 250,
+    
 });
