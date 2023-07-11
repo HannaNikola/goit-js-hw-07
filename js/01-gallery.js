@@ -52,7 +52,7 @@ function showPhoto(event) {
 }
 
 const modal = basicLightbox.create(`
-   <img src="${event.target.dataset}" width="800" height="600">
+   <img src="${event.target.data.source}" width="800" height="600">
 `)
 instance.show()
 
@@ -64,3 +64,4 @@ instance.show()
 //        removeEventListener('modal')
 //    }
 // }
+

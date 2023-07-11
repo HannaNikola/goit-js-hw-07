@@ -22,6 +22,7 @@ imgEl.insertAdjacentHTML('beforeend', imagesList);
 imgEl.addEventListener('click', showPhoto);
 
 function showPhoto(event) {
+    event.preventDefault();
     console.log(event.target.tagName);
     if (event.target.tagName === 'IMG') {
         return  ;
