@@ -51,5 +51,15 @@ function showPhoto(event) {
 }
 
 const modal = basicLightbox.create(`
-   <img src="${link}" width="800" height="600">
+   <img src="${item.original}" width="800" height="600">
 `)
+instance.show()
+
+
+//    onShow: () => {
+//        addEventListener('modal')
+//    },
+//    onClose: () => {
+//        removeEventListener('modal')
+//    }
+// }
