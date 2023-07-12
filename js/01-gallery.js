@@ -54,11 +54,11 @@ function showPhoto(event) {
         return ;
     }
 
-    const modal = basicLightbox.create(`
+    const modal= basicLightbox.create(`
    <img src="${event.target.data.source}" width="800" height="600">
 `)
     
-instance.show()
+    modal.show();
 }
 
 
