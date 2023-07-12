@@ -61,7 +61,12 @@ function showPhoto(event) {
 `
 )
     modal.show(); 
- 
+
+    imgEl.addEventListener('keydown', (event) => {
+        if (event.code === "Escape") {
+        modal.close(); 
+    }
+})
 }
 
 
