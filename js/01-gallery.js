@@ -37,6 +37,8 @@ const imagesList = galleryItems.map((item) => {
         `
 }).join('');
 
+
+
 imgEl.insertAdjacentHTML('beforeend', imagesList);
 // console.log(imagesList);
 
@@ -44,17 +46,27 @@ imgEl.insertAdjacentHTML('beforeend', imagesList);
 imgEl.addEventListener('click', showPhoto);
 
 function showPhoto(event) {
+    
     event.preventDefault();
-    console.log(event.target.tagName);
-    if (event.target.tagName === 'IMG') {
-        return  ;
-    }
-}
 
-const modal = basicLightbox.create(`
+    console.log(event.target.tagName);
+    if ( event.target.tagName === 'IMG') {
+        return ;
+    }
+
+    const modal = basicLightbox.create(`
    <img src="${event.target.data.source}" width="800" height="600">
 `)
+    
 instance.show()
+}
+
+
+
+// const modal = basicLightbox.create(`
+//    <img src="${event.target.data.source}" width="800" height="600">
+// `)
+// instance.show()
 
 
 //    onShow: () => {
